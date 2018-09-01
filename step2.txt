@@ -1,0 +1,2 @@
+echo Istalling... && curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer && mkdir -p /var/www/pterodactyl
+cd /var/www/pterodactyl && curl -Lo panel.tar.gz https://github.com/pterodactyl/panel/releases/download/v0.7.9/panel.tar.gz && tar --strip-components=1 -xzvf panel.tar.gz && chmod -R 755 storage/* bootstrap/cache/ && cp .env.example .env && echo Continue On since I am not installing the php thingy
